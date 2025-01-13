@@ -1,14 +1,14 @@
 import streamlit as st
 import pandas as pd
 
-# Task 1: Initialize Session State for storing student data
+# Initialize Session State for storing student data
 if "students" not in st.session_state:
     st.session_state.students = []  # Initialize as an empty list
 
 # Title
 st.title("Student Tracker")
 
-# Section: Adding Student Data
+# Adding Student Data
 st.header("Add Student")
 name = st.text_input("Enter Student Name:")
 score = st.number_input("Enter Score:", min_value=0, max_value=100, step=1)
@@ -21,7 +21,7 @@ if st.button("Add Student"):
         st.session_state.students.append({"Name": name, "Score": score})
         st.success(f"Student '{name}' with score {score} added!")
 
-# Task 2: Displaying and Filtering Student Data
+# Displaying and Filtering Student Data
 if st.session_state.students:
     st.header("Student Data")
     
