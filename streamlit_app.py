@@ -6,7 +6,7 @@ if "students" not in st.session_state:
     st.session_state.students = []  # Initialize as an empty list
 
 # Title
-st.title("Student Tracker")
+st.title("Student Score Tracker")
 
 # Adding Student Data
 st.header("Add Student")
