@@ -1,11 +1,11 @@
 import streamlit as st
 import pandas as pd
 
-# Initialize Session State for storing student data
+# Session State for storing student data
 if "students" not in st.session_state:
     st.session_state.students = []  # Initialize as an empty list
 
-# Title
+# Title of the data app
 st.title("Student Score Tracker")
 
 # Adding Student Data
@@ -25,10 +25,10 @@ if st.button("Add Student"):
 if st.session_state.students:
     st.header("Student Data")
     
-    # Convert session state data to a DataFrame
+    # Converting session state data to a DataFrame
     df = pd.DataFrame(st.session_state.students)
     
-    # Display the DataFrame
+    # Displaying the DataFrame
     st.write("All Students:")
     st.dataframe(df)
 
